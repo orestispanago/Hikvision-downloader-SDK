@@ -1,5 +1,5 @@
 
-#include "../include/HCNetSDK.h"
+#include <HCNetSDK.h>
 #include <string.h>
 #include <fstream>
 #include "params.h"
