@@ -6,3 +6,5 @@
 raw/
 
 build/downloader
+
+.vscode/
