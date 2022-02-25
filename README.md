@@ -1,17 +1,27 @@
 ### Hikvision-downloader
 
-This branch is based on the ```consoleDemo``` from the [Hikvision SDK](https://www.hikvision.com/en/support/download/sdk/).
+Downloads  pixel temperature data, visible and thermal images.
+
+Based on the ```consoleDemo``` from [Hikvision SDK](https://www.hikvision.com/en/support/download/sdk/).
 
 ### Instructions
 
-Set the camera IP and your credentials in ```main.cpp```
-
-From the ```build``` directory run:
-
-```make```
+To compile the c++ code, run ```make``` from the ```src``` directory.
 
 Run the executable from the same folder:
 
-```./downloader``` 
+```./hiktherm -h``` 
 
-Images and binary files are saved in ```raw``` folder.
+Example usage:
+
+```./hiktherm --ip 0.0.0.0 --user admin --pass '12345@#` --output a```
+
+will download ```a_t.jpeg```, ```a_v.jpeg``` and ```a.dat```.
+
+```downloader.py``` runs the executable and uploads to FTP server.
+
+Crontab example:
+
+```
+*/10 * * * * cd ~/Hikvision-Downloader-SDK/src; python3 downloader.py > crontab.log 2> crontab.err
+```
