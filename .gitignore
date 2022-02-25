@@ -6,3 +6,7 @@
 raw/
 
 build/downloader
+
+src/__pycache__/
+
+src/hiktherm

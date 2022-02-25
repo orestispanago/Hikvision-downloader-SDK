@@ -21,7 +21,7 @@ OBJSPATH = $(addprefix obj/,$(OBJFILE))
 
 LIBPATH = ../lib/
 LIBS = -Wl,-rpath=./:./HCNetSDKCom:../lib -lhcnetsdk
-EXE = downloader
+EXE = hiktherm
 
 $(EXE):$(OBJFILE)
 	$(CXX) -L$(LIBPATH)  -o $(EXE) $(OBJFILE) $(INCPATHS) $(LIBS)
