@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  hiktherm:
+    container_name: hiktherm_container
+    image: gcc:latest
+    volumes:
+      - .:/usr/hiktherm
+    working_dir: /usr/hiktherm/src
+    tty: true

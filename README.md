@@ -23,5 +23,13 @@ will download ```a_t.jpeg```, ```a_v.jpeg``` and ```a.dat```.
 Crontab example:
 
 ```
-*/10 * * * * cd ~/Hikvision-Downloader-SDK/src; python3 downloader.py > crontab.log 2> crontab.err
+*/10 * * * * python3 ~/Hikvision-Downloader-SDK/main.py
 ```
+
+### Docker
+
+You can run the ```hiktherm``` executable as well  the ```main.py``` script from a docker container.
+
+Use ```docker compose up -d``` to build the image and start the container.
+
+Use ```docker exec -it python3 main.py``` to run the python script.  
